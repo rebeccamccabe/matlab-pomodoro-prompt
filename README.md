@@ -17,5 +17,5 @@ If you finish your task early and want to force a new prompt+pomodoro, run `stop
 If your timer object got deleted from the workspace (ie you used `clear`), 
 you can recover it using `timerfindall('Name','focus_prompt')`.
 
-[image of pomodoro timer](taskTrackerPomodoroImage.JPG)
-[image of focus prompt in editor](taskTrackerFocusCheckImage.JPG)
+![image of pomodoro timer](taskTrackerPomodoroImage.JPG)
+![image of focus prompt in editor](taskTrackerFocusCheckImage.JPG)
