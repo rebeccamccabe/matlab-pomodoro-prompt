@@ -99,9 +99,9 @@ function drawPomo(timer, taskLabel, duration)
     y = [0 cos(angle)];
     fill(hAx, x,y,'g');
     axis equal
-    xlim([-1 1])
-    ylim([-1 1])
+    xlim(hAx,[-1 1])
+    ylim(hAx,[-1 1])
     timeRemaining = datetime(0, 1, 1, 0, 0, duration*fractionRemaining);
     xlabel(hAx,['Time remaining: ' datestr(timeRemaining,'MM:SS')])
-    title(taskLabel)
+    title(hAx,taskLabel)
 end
