@@ -1,4 +1,6 @@
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=rebeccamccabe/matlab-pomodoro-prompt&file=taskTracker.m)
+
 MATLAB productivity tool using native matlab UI. Prompts at periodic intervals 
 for what you are working on, shows a Pomodoro timer in the editor, and provides 
 accountability at the end of each timer. Helpful for ADHD and focus.

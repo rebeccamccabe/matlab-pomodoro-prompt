@@ -17,7 +17,12 @@ end
 
 function runScriptIfActive(t,period)
     % Check if matlab editor is currently the selected window
-    editorActive = com.mathworks.mde.desk.MLDesktop.getInstance.getMainFrame.isActive;
+    editor = com.mathworks.mde.desk.MLDesktop.getInstance.getMainFrame;
+    if isempty(editor)
+        editorActive = true; % for matlab online
+    else 
+        editorActive = editor.isActive;
+    end
     if editorActive
         taskPrompt(t,period)
         %parfeval(taskPrompt(period), 0);
