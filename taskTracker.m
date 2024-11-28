@@ -38,8 +38,11 @@ function taskPrompt(t,period)
     stop(old)
     delete(old)
 
+    filepath = dir(which(mfilename('fullpath'))).folder;
+    filename = fullfile(filepath,'taskData.mat');
+
     % find last time's task
-    taskTable = load('taskData.mat').taskTable;
+    taskTable = load(filename).taskTable;
     lastTask = taskTable.Task(end);
 
     % then prompt for user input
@@ -58,7 +61,7 @@ function taskPrompt(t,period)
 
         taskTable.Complete(end) = taskDone;
         taskTable(end+1,:) = {datetime('now'), nextTask, false};
-        save("taskData.mat","taskTable")
+        save(filename,"taskTable")
         
         timePrompt = toc;
         
