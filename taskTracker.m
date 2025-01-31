@@ -1,4 +1,3 @@
-
 function taskTracker()
     delete(timerfindall()) % delete old timers
     period = 15*60; % 15 minute timer
@@ -47,7 +46,7 @@ function taskPrompt(t,period)
 
     % then prompt for user input
     Q1 = strcat("The most important thing was ", lastTask, '. Did you do it? Y/N');
-    Q2 = 'What is the most important thing to do next?';
+    Q2 = 'What is the most important thing to do next? or "same" to reuse.';
 
     response = inputdlg({Q1,Q2},'Focus Check',1,{'',''});
     
@@ -58,6 +57,9 @@ function taskPrompt(t,period)
 
         taskDone = strcmpi(response{1},'y');
         nextTask = response{2};
+        if strcmpi(nextTask,'same')
+            nextTask = lastTask;
+        end
 
         taskTable.Complete(end) = taskDone;
         taskTable(end+1,:) = {datetime('now'), nextTask, false};
