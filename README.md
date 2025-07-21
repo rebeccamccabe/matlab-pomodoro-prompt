@@ -1,9 +1,10 @@
 
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=rebeccamccabe/matlab-pomodoro-prompt&file=taskTracker.m)
 
-MATLAB productivity tool using native matlab UI. Prompts at periodic intervals 
-for what you are working on, shows a Pomodoro timer in the editor, and provides 
-accountability at the end of each timer. Helpful for ADHD and focus.
+MATLAB productivity tool using native matlab UI. Helpful for ADHD and focus.
+- Prompts at periodic intervals for what you are working on
+- Shows a colored arc visual Pomodoro timer in the editor that changes from green to yellow to red as time elapses
+- Provides accountability at the end of each timer
 
 Usage: run `taskTracker()` to start a timer that will repeat indefinitely.
 Consider adding this to your `startup.m` if you want it to start automatically when you open MATLAB.
@@ -21,3 +22,5 @@ you can recover it using `timerfindall('Name','focus_prompt')`.
 
 ![image of pomodoro timer](taskTrackerPomodoroImage.JPG)
 ![image of focus prompt in editor](taskTrackerFocusCheckImage.JPG)
+
+Looking for a similar utility for VS Code? See [here](https://github.com/rebeccamccabe/time-coder).
